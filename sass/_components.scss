@@ -215,7 +215,7 @@
 //HOTEL OVERVIEW
 .overview {
   display: flex;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   align-items: center;
 
   &__heading {
@@ -270,11 +270,13 @@
   }
 
   &__rating {
+    cursor: pointer;
     background-color: var(--color-primary);
     margin-left: 3rem;
     color: #fff;
     align-self: stretch;
     padding: 0 2.25rem;
+    user-select: none;
 
     display: flex;
     flex-direction: column;

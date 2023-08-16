@@ -47,7 +47,7 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 27.8125em) {
     html {
-      font-size: 40%; } }
+      font-size: 37.5%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -163,11 +163,17 @@ body {
       display: inline-block;
       margin-right: 0.7rem;
       flex: 0 0 auto;
-      background-color: var(--color-primary);
-      -webkit-mask-image: url(../img/chevron-thin-right.svg);
-      mask-image: url(../img/chevron-thin-right.svg);
-      -webkit-mask-size: cover;
-      mask-size: cover; }
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover;
+      background-color: transparent; }
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        .detail__list-item::before {
+          background-color: var(--color-primary);
+          -webkit-mask-image: url(../img/chevron-thin-right.svg);
+          mask-image: url(../img/chevron-thin-right.svg);
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-image: none; } }
   .detail__recommend {
     font-size: 1.3rem;
     color: var(--color-grey-dark-3);
@@ -295,7 +301,7 @@ body {
         width: 1.6rem;
         top: 0.2rem;
         right: 1.5rem;
-        font-size: 0.7rem; } }
+        font-size: 0.8rem; } }
   .user-nav__user {
     user-select: none; }
   .user-nav__user-photo {
@@ -400,6 +406,10 @@ body {
       .overview__heading {
         font-size: 1.75rem;
         padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 27.8125em) {
+      .overview__heading {
+        letter-spacing: 0.5px;
+        padding: 1rem 1.25rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -407,12 +417,19 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+    @media only screen and (max-width: 27.8125em) {
+      .overview__icon-star, .overview__icon-location {
+        width: 1.15rem;
+        height: 1.15rem; } }
   .overview__location {
     font-size: 1.2rem;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 27.8125em) {
+      .overview__location {
+        font-size: 1rem; } }
   .overview__icon-location {
-    margin-right: 0.5rem; }
+    margin-right: 0.25rem; }
   .overview__rating {
     cursor: pointer;
     background-color: var(--color-primary);
@@ -438,6 +455,10 @@ body {
         font-size: 1.8rem;
         margin-bottom: -2px;
         margin-top: -4px; } }
+    @media only screen and (max-width: 27.8125em) {
+      .overview__rating-average {
+        margin-bottom: -2px;
+        margin-top: -2px; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase; }
@@ -510,6 +531,9 @@ body {
   cursor: pointer;
   padding-bottom: 2px;
   transition: all 0.2s; }
+  @media only screen and (max-width: 27.8125em) {
+    .btn-inline {
+      padding-bottom: 1px; } }
   .btn-inline span {
     margin-left: 3px;
     transition: margin-left 0.2s; }

@@ -45,6 +45,9 @@ html {
   @media only screen and (max-width: 70.69em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 27.8125em) {
+    html {
+      font-size: 42%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -77,6 +80,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-evenly;
+      height: 11rem; } }
 
 .content {
   display: flex; }
@@ -104,6 +112,9 @@ body {
   @media only screen and (max-width: 57.18em) {
     .detail {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
   .detail__description {
     padding: 3rem;
     flex: 0 0 60%;
@@ -116,6 +127,10 @@ body {
     @media only screen and (max-width: 43.75em) {
       .detail__description {
         padding-bottom: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .detail__description {
+        margin-right: 0;
+        margin-bottom: 3rem; } }
     .detail__description-text:not(:last-of-type) {
       margin-bottom: 2rem; }
   .detail__review {
@@ -187,6 +202,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2);
+      border-radius: 100rem; }
+      .search:focus-within {
+        background-color: var(--color-grey-light-3); }
+      .search .search__input:focus {
+        background-color: var(--color-grey-light-3); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -198,11 +223,17 @@ body {
     width: 90%;
     transition: all 0.2s;
     margin-right: -3.25rem; }
+    @media only screen and (max-width: 31.25em) {
+      .search__input {
+        width: 95%;
+        padding: 0.5rem 0; } }
     .search__input:focus {
       outline: none;
       width: 100%;
-      background-color: var(--color-grey-light-3);
-      padding: 0.68rem 2.2rem; }
+      background-color: var(--color-grey-light-3); }
+      @media only screen and (max-width: 31.25em) {
+        .search__input:focus {
+          width: 90%; } }
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
       color: --color-grey-light-4;
@@ -316,11 +347,21 @@ body {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
         padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.25rem 0.5rem; } }
   .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;
     fill: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        height: 1.5rem;
+        width: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
@@ -347,6 +388,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.75rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -372,11 +417,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
     margin-top: -5px; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem;
+        margin-bottom: -2px;
+        margin-top: -4px; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase; }
@@ -466,6 +519,9 @@ body {
   @media only screen and (max-width: 57.18em) {
     .cta {
       padding: 2.5rem 0; } }
+  @media only screen and (max-width: 27.8125em) {
+    .cta {
+      padding: 2.5rem 1rem; } }
   .cta__book-now {
     text-transform: uppercase;
     font-size: 2rem;
@@ -474,6 +530,9 @@ body {
     @media only screen and (max-width: 57.18em) {
       .cta__book-now {
         margin-bottom: 2rem; } }
+    @media only screen and (max-width: 27.8125em) {
+      .cta__book-now {
+        font-size: 1.75rem; } }
 
 .btn {
   font-size: 1.4rem;
@@ -516,3 +575,6 @@ body {
     animation: pulsate 1s infinite;
     outline: 2px solid var(--color-grey-dark-2);
     outline-offset: 2px; }
+    @media only screen and (max-width: 27.8125em) {
+      .btn:focus {
+        outline: 1px solid var(--color-grey-dark-2); } }

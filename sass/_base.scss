@@ -43,6 +43,12 @@ $bp-big: 57.18em; //915px
 
 $bp-medium: 43.75em; //700px
 
+$bp-small: 37.5em; //600px
+
+$bp-smallest: 31.25em; //500px
+
+$bp-tiny: 27.8125em; //445px
+
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +66,10 @@ html {
 
   @media only screen and (max-width: $bp-large) {
     font-size: 50%; // 8px
+  }
+
+  @media only screen and (max-width: $bp-tiny) {
+    font-size: 42%; // 7px
   }
 }
 

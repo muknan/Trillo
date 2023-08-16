@@ -14,6 +14,21 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+    border-radius: 100rem;
+
+    &:focus-within {
+      background-color: var(--color-grey-light-3);
+    }
+
+    & &__input:focus {
+      background-color: var(--color-grey-light-3);
+    }
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -26,11 +41,19 @@
     transition: all 0.2s;
     margin-right: -3.25rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+      width: 95%;
+      padding: 0.5rem 0;
+    }
+
     &:focus {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
-      padding: 0.68rem 2.2rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        width: 90%;
+      }
     }
 
     &::-webkit-input-placeholder {
@@ -202,6 +225,11 @@
         justify-content: center;
         padding: 2rem;
       }
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 1.25rem 0.5rem;
+      }
     }
   }
 
@@ -210,6 +238,12 @@
     width: 1.75rem;
     fill: currentColor;
     margin-right: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 
@@ -250,6 +284,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.75rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -288,6 +327,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
@@ -295,6 +338,12 @@
     font-weight: 300;
     margin-bottom: -3px;
     margin-top: -5px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      margin-bottom: -2px;
+      margin-top: -4px;
+    }
   }
 
   &__rating-count {
@@ -423,6 +472,10 @@
     padding: 2.5rem 0;
   }
 
+  @media only screen and (max-width: $bp-tiny) {
+    padding: 2.5rem 1rem;
+  }
+
   &__book-now {
     text-transform: uppercase;
     font-size: 2rem;
@@ -430,6 +483,9 @@
     margin-bottom: 2.5rem;
     @media only screen and (max-width: $bp-big) {
       margin-bottom: 2rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 1.75rem;
     }
   }
 }
@@ -496,6 +552,9 @@
     animation: pulsate 1s infinite;
     outline: 2px solid var(--color-grey-dark-2);
     outline-offset: 2px;
+    @media only screen and (max-width: $bp-tiny) {
+      outline: 1px solid var(--color-grey-dark-2);
+    }
   }
 
   // &:hover:after {

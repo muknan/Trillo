@@ -186,7 +186,8 @@ body {
       @media only screen and (max-width: 43.75em) {
         .detail__recommend-photo {
           height: 3rem;
-          width: 3rem; } }
+          width: 3rem;
+          border: 2px solid #fff; } }
       .detail__recommend-photo:not(:last-child) {
         margin-right: -1.5rem; }
         @media only screen and (max-width: 57.18em) {

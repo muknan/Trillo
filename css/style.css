@@ -289,6 +289,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .user-nav__notifications {
+        height: 1.5rem;
+        width: 1.5rem;
+        top: 0.2rem;
+        right: 1.5rem;
+        font-size: 0.7rem; } }
   .user-nav__user {
     user-select: none; }
   .user-nav__user-photo {

@@ -5,6 +5,12 @@
   box-shadow: var(--shadow-dark);
 
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -20,6 +26,9 @@
 
 .content {
   display: flex;
+  @media only screen and (max-width: $bp-big) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -43,13 +52,24 @@
   border-bottom: var(--line);
   font-size: 1.4rem;
 
+  @media only screen and (max-width: $bp-big) {
+    padding: 3rem;
+  }
+
   &__description {
-    background-color: orange;
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
     background-color: #fff;
     box-shadow: var(--shadow-light);
+
+    @media only screen and (max-width: $bp-big) {
+      margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-bottom: 2rem;
+    }
 
     &-text:not(:last-of-type) {
       margin-bottom: 2rem;
@@ -73,6 +93,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 2rem 0;
+      padding: 2rem 0;
+    }
 
     &-item {
       flex: 0 0 50%;
@@ -113,6 +137,7 @@
     }
 
     &-friends {
+      display: flex;
     }
 
     &-photo {
@@ -122,8 +147,16 @@
       border-radius: 50%;
       border: 3px solid #fff;
 
+      @media only screen and (max-width: $bp-medium) {
+        height: 3rem;
+        width: 3rem;
+      }
+
       &:not(:last-child) {
-        margin-right: -1.15rem;
+        margin-right: -1.5rem;
+        @media only screen and (max-width: $bp-big) {
+          margin-right: -2rem;
+        }
       }
     }
   }

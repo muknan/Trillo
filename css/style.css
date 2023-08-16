@@ -47,7 +47,7 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 27.8125em) {
     html {
-      font-size: 42%; } }
+      font-size: 40%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -291,8 +291,8 @@ body {
     align-items: center; }
     @media only screen and (max-width: 31.25em) {
       .user-nav__notifications {
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 1.6rem;
+        width: 1.6rem;
         top: 0.2rem;
         right: 1.5rem;
         font-size: 0.7rem; } }

@@ -331,8 +331,9 @@ body {
       color: var(--color-primary); }
     .user-nav__user-item {
       position: relative;
-      padding: 1.5rem 3.82rem;
-      border-bottom: 1px solid rgba(244, 242, 242, 0.6); }
+      padding: 1.5rem 3.82rem; }
+      .user-nav__user-item:not(:last-child) {
+        border-bottom: 1px solid rgba(244, 242, 242, 0.6); }
       @media only screen and (max-width: 31.25em) {
         .user-nav__user-item {
           padding: 0.9rem 3.82rem; } }

@@ -188,7 +188,11 @@
     &-item {
       position: relative;
       padding: 1.5rem 3.82rem;
-      border-bottom: 1px solid rgba(244, 242, 242, 0.6);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(244, 242, 242, 0.6);
+      }
+
       @media only screen and (max-width: $bp-smallest) {
         padding: 0.9rem 3.82rem;
       }

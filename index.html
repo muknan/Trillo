@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
+    <script defer src="js/script.js"></script>
+
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
   <body>
@@ -47,12 +49,29 @@
           </div>
 
           <div class="user-nav__user">
-            <img
-              src="img/user.jpg"
-              alt="User photo"
-              class="user-nav__user-photo"
-            />
-            <span class="user-nav__user-name">Mukul</span>
+            <div class="user-nav__user-details">
+              <img
+                src="img/user.jpg"
+                alt="User photo"
+                class="user-nav__user-photo"
+              />
+              <span class="user-nav__user-name">Mukul </span>
+            </div>
+
+            <div class="user-nav__menu">
+              <ul class="user-nav__user-list">
+                <li class="user-nav__user-item">
+                  <a href="#" class="user-nav__user-link">Settings</a>
+                </li>
+                <li class="user-nav__user-item">
+                  <a href="#" class="user-nav__user-link">Profile</a>
+                </li>
+                <li class="user-nav__user-item">
+                  <a href="#" class="user-nav__user-link">Logout</a>
+                </li>
+              </ul>
+              <div class="border-bottom"></div>
+            </div>
           </div>
         </nav>
       </header>

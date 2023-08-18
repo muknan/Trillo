@@ -9,10 +9,10 @@
 //SEARCH
 .search {
   flex: 0 0 40%;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   @media only screen and (max-width: $bp-smallest) {
     order: 1;
@@ -26,6 +26,45 @@
 
     & &__input:focus {
       background-color: var(--color-grey-light-3);
+    }
+  }
+
+  &__results {
+    z-index: 20;
+    position: absolute;
+    list-style: none;
+    // height: 100%;
+    // max-width: 100%;
+    top: 3.3rem;
+    margin-left: 1.65rem;
+    // left: 11.1rem;
+
+    & li {
+      white-space: nowrap;
+      padding: 1.5rem 2.5rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+
+      &:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.1rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        margin-left: 0;
+        font-size: 1.4rem;
+        margin-right: 2rem;
+      }
     }
   }
 
@@ -164,7 +203,7 @@
       overflow: hidden;
       position: absolute;
       list-style: none;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.9);
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
       top: 4rem;
@@ -180,6 +219,8 @@
     &-link {
       &:visited,
       &:link {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         color: var(--color-primary);
       }
@@ -187,7 +228,7 @@
 
     &-item {
       position: relative;
-      padding: 1.5rem 3.82rem;
+      padding: 1.5rem 2.6rem;
 
       &:not(:last-child) {
         border-bottom: 1px solid rgba(244, 242, 242, 0.6);
@@ -197,7 +238,7 @@
         padding: 0.9rem 3.82rem;
       }
       &:hover {
-        background-color: var(--color-grey-light-3);
+        background-color: #fff;
       }
 
       // &:hover::after {
@@ -214,6 +255,10 @@
       //   height: 1px;
       //   width: 8rem;
       // }
+    }
+
+    &-icon {
+      margin-right: 1rem;
     }
   }
 

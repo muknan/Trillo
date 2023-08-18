@@ -208,7 +208,8 @@ body {
   flex: 0 0 40%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   @media only screen and (max-width: 31.25em) {
     .search {
       order: 1;
@@ -219,6 +220,32 @@ body {
         background-color: var(--color-grey-light-3); }
       .search .search__input:focus {
         background-color: var(--color-grey-light-3); } }
+  .search__results {
+    z-index: 20;
+    position: absolute;
+    list-style: none;
+    top: 3.3rem;
+    margin-left: 1.65rem; }
+    .search__results li {
+      white-space: nowrap;
+      padding: 1.5rem 2.5rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px); }
+      .search__results li:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px; }
+      .search__results li:hover {
+        background-color: var(--color-primary);
+        color: #fff; }
+      @media only screen and (max-width: 43.75em) {
+        .search__results li {
+          font-size: 1.1rem; } }
+      @media only screen and (max-width: 31.25em) {
+        .search__results li {
+          margin-left: 0;
+          font-size: 1.4rem;
+          margin-right: 2rem; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -316,7 +343,7 @@ body {
       overflow: hidden;
       position: absolute;
       list-style: none;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.9);
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
       top: 4rem;
@@ -327,18 +354,22 @@ body {
       visibility: hidden;
       transition: all 0.3s cubic-bezier(1, 0, 0, 1); }
     .user-nav__user-link:visited, .user-nav__user-link:link {
+      display: flex;
+      align-items: center;
       text-decoration: none;
       color: var(--color-primary); }
     .user-nav__user-item {
       position: relative;
-      padding: 1.5rem 3.82rem; }
+      padding: 1.5rem 2.6rem; }
       .user-nav__user-item:not(:last-child) {
         border-bottom: 1px solid rgba(244, 242, 242, 0.6); }
       @media only screen and (max-width: 31.25em) {
         .user-nav__user-item {
           padding: 0.9rem 3.82rem; } }
       .user-nav__user-item:hover {
-        background-color: var(--color-grey-light-3); }
+        background-color: #fff; }
+    .user-nav__user-icon {
+      margin-right: 1rem; }
   .user-nav__user-photo {
     height: 3.75rem;
     border-radius: 50%;

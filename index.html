@@ -12,6 +12,14 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <script defer src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
@@ -26,6 +34,7 @@
             class="search__input"
             placeholder="Search hotels"
           />
+          <ul class="search__results"></ul>
           <button class="search__button">
             <svg class="search__icon">
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -61,13 +70,31 @@
             <div class="user-nav__menu">
               <ul class="user-nav__user-list">
                 <li class="user-nav__user-item">
-                  <a href="#" class="user-nav__user-link">Settings</a>
+                  <a href="#" class="user-nav__user-link"
+                    ><ion-icon
+                      name="settings-outline"
+                      class="user-nav__user-icon"
+                    ></ion-icon
+                    >Settings</a
+                  >
                 </li>
                 <li class="user-nav__user-item">
-                  <a href="#" class="user-nav__user-link">Profile</a>
+                  <a href="#" class="user-nav__user-link"
+                    ><ion-icon
+                      name="person-outline"
+                      class="user-nav__user-icon"
+                    ></ion-icon
+                    >Profile</a
+                  >
                 </li>
                 <li class="user-nav__user-item">
-                  <a href="#" class="user-nav__user-link">Logout</a>
+                  <a href="#" class="user-nav__user-link"
+                    ><ion-icon
+                      name="log-out-outline"
+                      class="user-nav__user-icon"
+                    ></ion-icon
+                    >Logout</a
+                  >
                 </li>
               </ul>
               <div class="border-bottom"></div>

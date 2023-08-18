@@ -64,6 +64,9 @@
         margin-left: 0;
         font-size: 1.4rem;
         margin-right: 2rem;
+        &:first-child {
+          margin-top: -0.4rem;
+        }
       }
     }
   }

@@ -245,7 +245,9 @@ body {
         .search__results li {
           margin-left: 0;
           font-size: 1.4rem;
-          margin-right: 2rem; } }
+          margin-right: 2rem; }
+          .search__results li:first-child {
+            margin-top: -0.4rem; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;

@@ -436,14 +436,14 @@
     &-photo {
       width: 100%;
       display: block;
-      transform: scale(1);
+      transform: scale(1.15);
       transition: all 0.5s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
     }
 
     &:hover &-photo {
-      transform: scale(1.1);
+      transform: scale(1.25);
       filter: blur(3px) brightness(80%);
     }
   }

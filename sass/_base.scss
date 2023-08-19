@@ -37,7 +37,7 @@ Grey dark 3: #999
 
 $bp-largest: 75em; //1200px
 
-$bp-large: 70.69em; //1130px
+$bp-large: 70.7em; //1130px
 
 $bp-big: 57.18em; //915px
 
@@ -47,7 +47,7 @@ $bp-small: 37.5em; //600px
 
 $bp-smallest: 31.25em; //500px
 
-$bp-tiny: 27.8125em; //445px
+$bp-tiny: 25em; //445px
 
 * {
   margin: 0;
@@ -69,7 +69,7 @@ html {
   }
 
   @media only screen and (max-width: $bp-tiny) {
-    font-size: 37.5%; // 7px
+    font-size: 40%; // 7px
   }
 }
 

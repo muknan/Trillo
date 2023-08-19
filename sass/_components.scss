@@ -35,6 +35,7 @@
     list-style: none;
     top: 100%;
     left: 10%;
+    // margin-left: 0.5rem;
 
     & li {
       white-space: nowrap;
@@ -42,6 +43,34 @@
       background-color: rgba(255, 255, 255, 0.9);
       -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6px);
+      width: 30rem;
+
+      @media only screen and (max-width: $bp-large) {
+        font-size: 1.6rem;
+        width: 34rem;
+      }
+
+      @media only screen and (max-width: $bp-big) {
+        font-size: 1.35rem;
+        width: 27rem;
+        padding: 1.2rem 1.5rem;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.25rem;
+        width: 24rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.1rem;
+        width: 21rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.3rem;
+        width: 30rem;
+      }
 
       &:last-child {
         border-bottom-left-radius: 6px;
@@ -51,15 +80,6 @@
       &:hover {
         background-color: var(--color-primary);
         color: #fff;
-      }
-
-      @media only screen and (max-width: $bp-medium) {
-        font-size: 1.1rem;
-      }
-
-      @media only screen and (max-width: $bp-smallest) {
-        font-size: 1.4rem;
-        padding-right: 19rem;
       }
     }
   }
@@ -436,14 +456,14 @@
     &-photo {
       width: 100%;
       display: block;
-      transform: scale(1.1);
+      transform: scale(1.15);
       transition: all 0.5s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
     }
 
     &:hover &-photo {
-      transform: scale(1.22);
+      transform: scale(1.25);
       filter: blur(3px) brightness(80%);
     }
   }

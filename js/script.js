@@ -18,45 +18,11 @@ const searchData = [
   "Sandstone Bed & Breakfast",
 ];
 
-function filterResults(query) {
-  return searchData.filter((item) =>
-    item.toLowerCase().includes(query.toLowerCase())
-  );
+document.body.addEventListener("focusin", test);
+
+function test() {
+  searchResults.style.cssText = "";
 }
-
-function displayResults(results) {
-  searchResults.innerHTML = "";
-  results.forEach((result) => {
-    let li = document.createElement("li");
-    li.textContent = result;
-    li.addEventListener("click", () => {
-      searchInput.value = result;
-      searchResults.innerHTML = "";
-    });
-    searchResults.appendChild(li);
-  });
-}
-
-// event listener for search input
-searchInput.addEventListener("input", () => {
-  let query = searchInput.value;
-  if (query === "") {
-    searchResults.innerHTML = "";
-    console.log("Hello");
-  } else if (query.length > 1) {
-    let results = filterResults(query);
-    displayResults(results);
-  }
-});
-
-// event listener to close search results when clicking outside the input and the results
-document.addEventListener("click", (event) => {
-  let isClickInsideInput = event.target === searchInput;
-  let isClickInsideResults = searchResults.contains(event.target);
-  if (!isClickInsideInput && !isClickInsideResults) {
-    searchResults.innerHTML = "";
-  }
-});
 
 userEl.addEventListener("click", function () {
   userListEl.classList.toggle("menu-toggle"), false;
@@ -78,4 +44,49 @@ userListEl.addEventListener("mouseover", function () {
 
 userListEl.addEventListener("mouseout", function () {
   userEl.style.backgroundColor = "";
+});
+
+function filterResults(query) {
+  return searchData.filter((item) =>
+    item.toLowerCase().includes(query.toLowerCase())
+  );
+}
+
+function displayResults(results) {
+  searchResults.innerHTML = "";
+  results.forEach((result) => {
+    let li = document.createElement("li");
+    li.textContent = result;
+    li.addEventListener("click", () => {
+      searchInput.value = result;
+      searchResults.innerHTML = "";
+    });
+    searchResults.appendChild(li);
+  });
+  searchResults.style.cssText = `top: 100%;
+  transition: all 0.5s cubic-bezier(0.26, -0.6, 0.04, 2);
+  opacity: 1;
+  visibility: visible;
+  `;
+}
+
+// event listener for search input
+searchInput.addEventListener("input", () => {
+  let query = searchInput.value;
+  if (query === "") {
+    searchResults.innerHTML = "";
+    console.log("Hello");
+  } else if (query.length > 1) {
+    let results = filterResults(query);
+    displayResults(results);
+  }
+});
+
+// event listener to close search results when clicking outside the input and the results
+document.addEventListener("click", (event) => {
+  let isClickInsideInput = event.target === searchInput;
+  let isClickInsideResults = searchResults.contains(event.target);
+  if (!isClickInsideInput && !isClickInsideResults) {
+    searchResults.innerHTML = "";
+  }
 });
